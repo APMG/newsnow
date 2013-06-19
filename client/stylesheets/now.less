@@ -1,1 +1,37 @@
-/* CSS declarations go here */
+@import "definitions.less";
+
+header{
+	width: 100%;
+	.box-shadow(0px 3px 3px rgba(0,0,0, 0.2));
+	background-color: #fff;
+	padding: 5px;
+
+	h1{
+		width: 210px;
+		height: 20px;
+		margin: 5px auto;
+		a{
+			.ir();
+			background: transparent url(/images/newsnow.svg) no-repeat;
+			background-size: 100%; //376px 36px;
+			width: 210px;
+			height: 20px;
+			display: block;
+		}
+	}
+	#configure{
+		.ir();
+		display: block;
+		margin: 3px 0 0 0;
+		float: right;
+		width: 25px;
+		height: 25px;
+		border: 1px solid @black-30;
+		background: transparent url(/images/configure.svg) no-repeat center center;
+		background-size: 80%; //376px 36px;
+		padding: 5px;
+		&:hover{
+			background-color: @black-10;
+		}
+	}
+}
