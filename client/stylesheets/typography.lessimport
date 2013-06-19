@@ -1,0 +1,32 @@
+body{
+    .copy-font();
+    color: @black-80;
+}
+
+h1,h2,h3,h4,h5,h6{
+    .headline-font();
+    line-height: 1.2;
+}
+
+a { 
+    color: @link-color; 
+	-webkit-transition: color 0.15s ease-in-out; 
+	-moz-transition: color 0.15s ease-in-out; 
+	-o-transition: color 0.15s ease-in-out; 
+	transition: color 0.15s ease-in-out; 
+
+    -webkit-transition: background-color 0.15s ease-in-out; 
+    -moz-transition: background-color 0.15s ease-in-out; 
+    -o-transition: background-color 0.15s ease-in-out; 
+    transition: background-color 0.15s ease-in-out; 
+}
+a:hover { color: @link-color-hover; }
+a:focus { color: @link-color-hover; }
+
+
+blockquote{
+    border-left: 2px solid lighten(@brand-secondary, 30%);
+    padding-top: 0;
+    color: @black-60;
+    p{ color: @black-60;}
+}

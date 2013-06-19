@@ -52,7 +52,7 @@
 
 //font formatting we want in definitions, not typography
 .copy-font(){
-   font-family: Georgia, serif,
+   font-family: Georgia, serif;
 }
 
 .headline-font(){
