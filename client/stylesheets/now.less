@@ -3,6 +3,7 @@
 
 html{
 	background-color: #fdfdfd;
+	min-width: 290px;
 }
 
 header{
@@ -49,28 +50,55 @@ article{
 	.avatar{
 		img{
 			float: left;
-			margin: 0 10px 0 0;
-			//max-width: 60px;
-			//height: auto;
+			margin: 0 2% 0 0;
+			max-width: 15%;
+			height: auto;
 		}
 	}
 	.container{
-		margin-left: 70px;
+		margin-left: 18%;
 	}
 	.byline{
-		.clearfix();
+		//.clearfix();
+		position: relative;
+		margin-bottom: 5px;
 	}
 	h3{
-		display: inline-block;
-		float: left;
-		margin-bottom: 0;
+		margin: 0;
+		font-size: 14px;
+		color: @black-60;
 	}
 	time{
-		float: right;
-		display: inline-block;
+		text-align: right;
+		display: block;
+		position: absolute;
+		top: 0px;
+		right: 5px;
+		.label-font();
+		font-weight: bold;
+		color: @black-60;
+		
 	}
 	p{
 		margin-bottom: 0;
+	}
+}
+
+
+
+@media only screen and (min-width: 480px){
+	article{
+		.container{
+			margin-left: 90px;
+		}
+	}
+}
+
+@media only screen and (min-width: 900px){
+	article{
+		max-width: 860px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 }
