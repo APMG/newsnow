@@ -10,49 +10,15 @@
 @rightcol: 300px;
 
 
-body {
-    margin: 0;
-    font-size: 1em;
-    line-height: 1.4;
-}
-
-// redeinfe player bars
-//#apm_player_bar.ui-slider-horizontal {  background-position: center -472px; }
-//#apm_player_bar .ui-widget-header {  background-position: center -508px; }
-//#apm_player_loading{ background-position: center -542px;}
-
-/* ==|== primary styles =====================================================
-   Author: Than Tibbetts, American Public Media
-   version 1.2
-   ========================================================================== */
-
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-.content, header, footer {
-    width: 700px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.box.right {
-    float: right;
-    width: @rightcol;
-}
-
-.box.left {
-    float: left;
-    width: @leftcol;
-}
 
 #apm_media_player {
-    background-color: #fcfcfc;
-    background: url('/images/bg.png') repeat;
-    border-top: 10px solid #B5121B;
+    //background-color: #fcfcfc;
+    ///background: url('/images/bg.png') repeat;
+    //border-top: 10px solid #B5121B;
+}
+
+html,body{
+    min-height: 100%;
 }
 
 
@@ -82,60 +48,6 @@ body {
 
 #apm_header {
      margin-bottom: 20px;
-}
-
-#apm_logo {
-    background: url('/images/logo.png') top left no-repeat;
-    background-size: 100%;
-    height: 50px;
-    width: 320px;
-
-    float: left;
-
-    position: relative;
-}
-
-/*** support for retina display @2x logos ***/
-.apmbackgroundsize #apm_logo {
-    background: url('/images/logo@2x.png') top left no-repeat;
-    background-size: 100%;
-}
-
-
-#apm_logo a {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-}
-
-#apm_nav {
-    font-size: 0.875em;
-    text-align: center;
-    width: 320px;
-    float: right;
-}
-
-#apm_nav ul {
-    margin-left: 0;
-    margin-right: 0;
-    padding: 0;
-}
-
-#apm_nav a {
-    font-weight: bold;
-    text-decoration: none;
-}
-
-#apm_nav .donate {
-    color: red;
-}
-
-#apm_nav ul li {
-    display: inline;
-
-    margin: 0 0.5em;
 }
 
 
@@ -500,125 +412,6 @@ only screen and (min-device-pixel-ratio: 1.5) {
     cursor: pointer;
 }
 
-
-#apm_sharing_tools {
-    position: relative;
-}
-
-#apm_sharing_twitter, #apm_sharing_facebook {
-	display: block;
-	position: relative;
-}
-
-#apm_sharing_tab_controls {
-	margin: 0;
-	padding: 5px 9px 0;
-	list-style: none;
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	
-	background: #eee;
-	border-bottom: 1px solid #ddd;
-	display: block;
-	height: 25px;
-}
-
-.right #apm_sharing_tab_controls {
-    width: @rightcol - 2px;
-}
-
-.left #apm_sharing_tab_controls {
-    width: @leftcol - 2px;
-}
-
-#apm_sharing_tab_controls li {
-	float: left;
-	padding: 0 0.75em 0.25em;
-	margin: 0;
-	display: block;
-}
-
-
-#apm_sharing_tab_controls li.active {
-	background: white;
-	border-right: 1px solid #ccc;
-	border-left: 1px solid #ccc;
-	border-bottom: 1px solid #fff;
-	box-shadow: 0 -1px 1px rgba(0,0,0,0.15);
-	z-index: 9;
-	margin-top: -1px;
-}
-
-#apm_sharing_tab_controls li a {
-	font-size: 0.5em;
-	color: #333;
-	text-decoration: none;
-	text-transform: uppercase;
-}
-
-#apm_sharing_tab_controls img {
-	margin: -5px -3px 0 2px;
-	opacity: 0.5;
-	width: 16px;
-}
-
-#apm_sharing_tab_controls li:hover img {
-	opacity: 0.67;
-}
-
-#apm_sharing_tools .apm_sharing_tab {
-	clear: left;
-	display: block;
-	font-size: 0.875em;
-	margin-top: 32px;
-	background: #fff;
-	z-index: 10;
-	position: relative;
-	margin-left: -9px;
-	padding: 0.5em 0 0 9px;
-}
-
-#apm_playlist ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.apm_playlist_item {
-    border-bottom: 1px dotted #ccc;
-    padding: 0.5em 9px;
-    cursor: pointer;  /* alutz added */
-    margin: 0 -9px 0 -9px;
-}
-
-.apm_playlist_item:hover {
-    background: #f6f6f6;
-    text-shadow: 0 1px 0 #fff;
-}
-
-.apm_playlist_item:hover .apm_playlist_item_title {
-    color: #b5121b;
-}
-
-.apm_playlist_item:last-child {
-    border-bottom: none;
-}
-
-.apm_playlist_item_time {
-	font-size: 0.75em;
-	line-height: 1.33em;
-}
-
-.apm_playlist_item_title {
-    font-weight: bold;
-}
-
-.apm_playlist_item_artist, .apm_playlist_item_purchase_link {
-	margin-top: 0.25em;
-}
-
 .nowplaying {
 	cursor: default;
 }
@@ -681,18 +474,10 @@ only screen and (min-device-pixel-ratio: 1.5) {
 .preroll-active #apm_sponsor_overlay {
     display: block;
     opacity: 1;
-    height: 277px;
+    height: 100%;
     overflow-y: visible;
 }
 
-.preroll-active #apm_playlist_container, .preroll-active #apm_sharing_tools, .preroll-active #apm_footer {
-    opacity: 0.25;
-}
-
-#test {
-    position: fixed;
-    bottom: 10px;
-}
 
 /***   ***/
 
@@ -703,7 +488,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 #apm_sponsor_overlay {
     position: absolute;
     top: 0px;
-    left: -1px;
+    //left: -1px;
     bottom: 0;
     right: 0;
     text-align: center;
@@ -721,7 +506,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
     -ms-box-sizing: content-box;
     box-sizing: content-box;
     width: 100%;
-    border: 1px solid #333333;
+    //border: 1px solid #333333;
 }
 
 .preroll-active #apm_sponsor_overlay {
@@ -831,36 +616,7 @@ h4 {
 
 
 
-/* ==|== media queries ======================================================
-   ========================================================================== */
-//make control targets bigger for people on touch devices
-@media only screen and (min-width: 721px){
-    html.touch{
-        #apm_player_info{ height: 268px;}
-        #apm_player_controls{ height: 42px;}
-        #apm_player_play{ 
-            height: 40px; 
-            width: 42px;
-            background-position: 382px -46px;
-        }
-        #apm_player_pause{ 
-             height: 40px; 
-             width: 42px;
-             background-position: 380px -90px;
-         }
-         .volume.playtime {
-             #apm_player_bar_container{ width: 220px;}
-             #apm_player_bar_wrapper{ 
-                margin-top: 15px;
-                width: 300px; 
-            }
-         }
-         
-         
-    }
 
-}
-@media only screen and (max-width: 720px) {
     .box.right, .box.left {
         float: none;
         width: @leftcol;
@@ -953,9 +709,7 @@ h4 {
 	    z-index: 50;
 	}
 	#apm_sponsor_overlay_time{ float: none; }
-}
 
-@media only screen and (max-width: 400px) {
     .box.right, .box.left {
         float: none;
         width: 100%;
@@ -964,9 +718,8 @@ h4 {
     .content, header, footer, #apm_player_container, .left #apm_sharing_tab_controls {
         width: 100%;
     }
-}
 
-@media only screen and (max-width: 720px), only screen and (device-width: 768px) {
+//@media only screen and (max-width: 720px), only screen and (device-width: 768px) {
 
 /*** These styles handle the widths necessary to accomodate various widths of the play bar ***/
 
@@ -994,16 +747,7 @@ h4 {
 
 /*** END conditional classes ***/
 
-}
-
-
-// always hide the volume control on touch devices 
-html.touch{
-    #apm_player_volume_wrapper,
-    #apm_player_volume_slider_wrapper{
-        display: none;
-    }
-}
+//}
 
 
 
@@ -1034,25 +778,6 @@ html.touch{
 .hide-text { text-indent: 100%; white-space: nowrap; overflow: hidden; }
 
 
-/* ==|== print styles =======================================================
-   Print styles.
-   Inlined to avoid required HTTP connection: h5bp.com/r
-   ========================================================================== */
-
-@media print {
-  * { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */
-  a, a:visited { text-decoration: underline; }
-  a[href]:after { content: " (" attr(href) ")"; }
-  abbr[title]:after { content: " (" attr(title) ")"; }
-  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
-  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
-  thead { display: table-header-group; } /* h5bp.com/t */
-  tr, img { page-break-inside: avoid; }
-  img { max-width: 100% !important; }
-  @page { margin: 0.5cm; }
-  p, h2, h3 { orphans: 3; widows: 3; }
-  h2, h3 { page-break-after: avoid; }
-}
 
 /* ==|== DEBUGING styles =======================================================
    formats the soundmanger on-screen debug divs, when ?debug=true
