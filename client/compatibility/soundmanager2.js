@@ -67,7 +67,7 @@ function SoundManager(smURL, smID) {
     'useHighPerformance': false,        // position:fixed flash movie can help increase js/flash speed, minimize lag
     'flashPollingInterval': null,       // msec affecting whileplaying/loading callback frequency. If null, default of 50 msec is used.
     'html5PollingInterval': null,       // msec affecting whileplaying() for HTML5 audio, excluding mobile devices. If null, native HTML5 update events are used.
-    'flashLoadTimeout': 1000,           // msec to wait for flash movie to load before failing (0 = infinity)
+    'flashLoadTimeout': 0,           // msec to wait for flash movie to load before failing (0 = infinity)
     'wmode': null,                      // flash rendering mode - null, 'transparent', or 'opaque' (last two allow z-index to work)
     'allowScriptAccess': 'always',      // for scripting the SWF (object/embed property), 'always' or 'sameDomain'
     'useFlashBlock': false,             // *requires flashblock.css, see demos* - allow recovery from flash blockers. Wait indefinitely and apply timeout CSS to SWF, if applicable.
@@ -75,8 +75,8 @@ function SoundManager(smURL, smID) {
     'html5Test': /^(probably|maybe)$/i, // HTML5 Audio() format support test. Use /^probably$/i; if you want to be more conservative.
     'preferFlash': true,                // overrides useHTML5audio. if true and flash support present, will try to use flash for MP3/MP4 as needed since HTML5 audio support is still quirky in browsers.
     'noSWFCache': false,                // if true, appends ?ts={date} to break aggressive SWF caching.
-    'idPrefix': 'sound'                 // if an id is not provided to createSound(), this prefix is used for generated IDs - 'sound0', 'sound1' etc.
-
+    'idPrefix': 'sound',                 // if an id is not provided to createSound(), this prefix is used for generated IDs - 'sound0', 'sound1' etc.
+    'onerror': {}
   };
 
   this.defaultOptions = {

@@ -862,7 +862,7 @@ if (typeof APMPlayerFactory === 'undefined') {
                         this.lib.debugMode = Debug.enabled;
                         this.lib.flashPollingInterval = 150;  //helps improve seeker ui experience
                         //console.log(player.util.getLoadedScriptPathByFileName('soundmanager2'));
-                        this.lib.url =  'http://localhost:3000/swf/';  // used to dynamically determine lib location for flash lib dependency
+                        this.lib.url =  'http://common.publicradio.org/media_player/1.2.2/script/lib/swf/';  // used to dynamically determine lib location for flash lib dependency
 
                         this.lib.onready(function () {
                             if (player.audio.lib.html5Only === true) {  //SM2 will know onready() if HTML5 is the only option avail.
