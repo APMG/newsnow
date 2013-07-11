@@ -1,5 +1,5 @@
 
 
-Meteor.publish('Posts', function() {
+Meteor.publish('posts', function() {
   return Posts.find();
 });
