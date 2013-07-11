@@ -1,6 +1,7 @@
 {
   "packages": {
     "session-extras": {},
-    "router": {}
+    "router": {},
+    "roles": {}
   }
 }

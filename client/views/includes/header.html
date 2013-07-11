@@ -1,6 +1,10 @@
 <template name="header">
  <header class="navbar">
- 	<a href="#" id='configure'>Configure</a>
+ 	{{#if currentUser}}
+ 	<a href="#" id='configure'>Configure</a> 
+ 	{{/if}}
     <h1><a href='{{postsListPath}}' class='ir'>MPR News Now</a></h1>  
+
+
   </header>
 </template>
