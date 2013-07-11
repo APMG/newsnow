@@ -8,3 +8,6 @@ preserve-inputs
 less
 jquery
 session-extras
+accounts-ui
+accounts-password
+accounts-twitter
