@@ -1,5 +1,6 @@
 {
   "packages": {
-    "session-extras": {}
+    "session-extras": {},
+    "router": {}
   }
 }
