@@ -82,7 +82,19 @@ article{
 		
 	}
 	p{
-		margin-bottom: 0;
+		//margin-bottom: 0;
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	a.post-link{
+		margin-top: 0.5em;
+		font-weight: bold;
+		span{
+			color: @black-30;
+			font-weight: normal;
+			font-size: 13px;
+		}
 	}
 }
 

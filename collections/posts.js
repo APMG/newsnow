@@ -8,7 +8,7 @@ Posts.allow({
 Posts.deny({
   update: function(userId, post, fieldNames) {
     // may only edit the following two fields:
-    return (_.without(fieldNames, 'url', 'title').length > 0);
+    return (_.without(fieldNames, 'url', 'content').length > 0);
   }
 });
 
@@ -21,18 +21,22 @@ Meteor.methods({
     if (!user)
       throw new Meteor.Error(401, "You need to login to post new stories");
 
-    // ensure the post has a title
-    if (!postAttributes.title)
-      throw new Meteor.Error(422, 'Please fill in a headline');
+    // ensure the post has a content
+    if (!postAttributes.content)
+      throw new Meteor.Error(422, 'Please fill in a some post content');
 
-    // check that there are no previous posts with the same link
-    if (postAttributes.url && postWithSameLink) {
-      throw new Meteor.Error(302, 'This link has already been posted', postWithSameLink._id);
-    }
+    // ensure the post has a URL
+    if (!postAttributes.url)
+      throw new Meteor.Error(422, 'Please make sure the post has a URL');
+
+    // // check that there are no previous posts with the same link
+    // if (postAttributes.url && postWithSameLink) {
+    //   throw new Meteor.Error(302, 'This link has already been posted', postWithSameLink._id);
+    // }
 
     // pick out the whitelisted keys
-    var post = _.extend(_.pick(postAttributes, 'url', 'title', 'message'), {
-      title: postAttributes.title + (this.isSimulation ? '(client)' : '(server)'),
+    var post = _.extend(_.pick(postAttributes, 'content', 'title', 'message'), {
+      content: postAttributes.content + (this.isSimulation ? '(client)' : '(server)'),
       userId: user._id, 
       author: user.username, 
       submitted: new Date().getTime()
