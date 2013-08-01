@@ -5,7 +5,11 @@
 			<div class='byline'>
 				<h3>{{author}}</h3>  <time datetime='{{isoDate submitted}}' >&hellip;</time> 
 			</div>
-			<p>{{content}}</p>
+			{{#if image}}
+				<img src='{{image}}' />
+			{{/if}}
+			{{#markdown}}{{content}}{{/markdown}}
+			
 			{{#if url}}
 			<a href="{{url}}" class='post-link'>Read more <span>({{domain}})</span> &rarr; </a>
 			{{/if}}

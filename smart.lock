@@ -6,7 +6,8 @@
       "router": {},
       "roles": {},
       "moment": {},
-      "texture": {}
+      "texture": {},
+      "marked": {}
     },
     "packages": {
       "session-extras": {
@@ -33,6 +34,11 @@
         "git": "https://github.com/subhog/meteor-texture.git",
         "tag": "v0.1.1",
         "commit": "338f1130718f828196baadaf2ffa6bbb2d5b27fb"
+      },
+      "marked": {
+        "git": "https://github.com/chuangbo/meteor-marked.git",
+        "tag": "v0.2.8.2",
+        "commit": "f5d9d6dbc013ad1bd568fa610eb4d8a479943f18"
       },
       "page-js-ie-support": {
         "git": "https://github.com/tmeasday/meteor-page-js-ie-support.git",
