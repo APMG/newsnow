@@ -6,7 +6,6 @@ Meteor.Router.add({
 
 
 
-
 //only allow access to submit page if user is logged in
 Meteor.Router.filters({
   'requireLogin': function(page) {

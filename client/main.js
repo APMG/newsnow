@@ -63,7 +63,6 @@ Meteor.startup(function(){
 
     }); //end Session.whenTrue
 
-
 });
 
 

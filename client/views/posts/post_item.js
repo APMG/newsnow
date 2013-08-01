@@ -6,3 +6,9 @@ Template.postItem.helpers({
 		return a.hostname;
 	}
 });
+
+
+//fires when the template has rendered
+Template.postItem.rendered = function(){
+    jQuery('article time').timeago();  //make it say 'xxxx minutes ago'
+}
