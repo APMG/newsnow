@@ -4,9 +4,7 @@
     "basePackages": {
       "session-extras": {},
       "router": {},
-      "roles": {},
-      "moment": {},
-      "texture": {}
+      "roles": {}
     },
     "packages": {
       "session-extras": {
@@ -23,16 +21,6 @@
         "git": "https://github.com/alanning/meteor-roles.git",
         "tag": "v1.0.5",
         "commit": "a6e0ce33f8dc69a816165c458b138c2acb30ad0e"
-      },
-      "moment": {
-        "git": "https://github.com/possibilities/meteor-moment.git",
-        "tag": "v1.7.0",
-        "commit": "c64b6ec0e714b9556f4b6643d430b868ba69d3d7"
-      },
-      "texture": {
-        "git": "https://github.com/subhog/meteor-texture.git",
-        "tag": "v0.1.1",
-        "commit": "338f1130718f828196baadaf2ffa6bbb2d5b27fb"
       },
       "page-js-ie-support": {
         "git": "https://github.com/tmeasday/meteor-page-js-ie-support.git",

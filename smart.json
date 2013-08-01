@@ -2,8 +2,6 @@
   "packages": {
     "session-extras": {},
     "router": {},
-    "roles": {},
-    "moment": {},
-    "texture": {}
+    "roles": {}
   }
 }

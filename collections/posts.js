@@ -1,25 +1,19 @@
 Posts = new Meteor.Collection('posts');
 
+
+//TODO: Validators need to get more specific and hook into permissions/roles at some point
 Posts.allow({
   insert: function(userId, doc) {
     // only allow posting if you are logged in
     return !! userId;
+  },
+  update: function(userId, doc) {
+    // only allow posting if you are logged in
+    return !! userId;
   }
+
 });
 
-
-
-// Posts.allow({
-//   update: ownsDocument,
-//   remove: ownsDocument
-// });
-
-// Posts.deny({
-//   update: function(userId, post, fieldNames) {
-//     // may only edit the following two fields:
-//     return (_.without(fieldNames, 'url', 'content').length > 0);
-//   }
-// });
 
 Meteor.methods({
   post: function(postAttributes) {

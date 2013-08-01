@@ -9,13 +9,18 @@
             <input name="sticky" type="checkbox" value="{{sticky}}" {{#if sticky}}checked='checked'{{/if}}/>
         </div>
 
-        <div
 
         <div>
             <label for='url'>Link URL</label>
             <input name="url" type="text" value="{{url}}" placeholder="post URL" />
         </div>
 
+        <p><em>Eventually links and content message will be populated from a Link URL, looking at opengraph meta tags.</em></p>
+
+        <div>
+            <label for='imageUrl'>Image URL</label>
+            <input name="imageUrl" type="text" value="{{imageUrl}}" placeholder="image URL" />
+        </div>
 
         <div>
             <label for='content'>Content message</label>

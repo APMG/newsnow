@@ -5,15 +5,15 @@
 			<div class='byline'>
 				<h3>{{author}}</h3>  <time datetime='{{isoDate submitted}}' >&hellip;</time> 
 			</div>
-			{{#if image}}
-				<img src='{{image}}' />
+			{{#if imageUrl}}
+				<img src='{{imageUrl}}' />
 			{{/if}}
 			
 			{{#markdown}}{{content}}{{/markdown}}
 			
 		</div>
-		{{#if currentUser}}<a href="{{postEditPath this}}">Edit</a>{{/if}}
-
 	</article>
+	{{#if currentUser}}<a href="{{postEditPath this}}" class="postEdit"><span>&crarr;</span> Edit</a>{{/if}}
+
 
 </template>

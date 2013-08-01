@@ -14,7 +14,8 @@ Template.postEdit.events({
     var postProperties = {
         url: $(e.target).find('[name=url]').val(),
       	content: $(e.target).find('[name=content]').val(),
-      	sticky: $(e.target).find('[name=sticky]:checked').val()
+      	sticky: $(e.target).find('[name=sticky]:checked').val(),
+        imageUrl: $(e.target).find('[name=imageUrl]').val()
     }
 
     Posts.update(currentPostId, {$set: postProperties}, function(error) {
@@ -22,7 +23,7 @@ Template.postEdit.events({
         // display the error to the user
         alert(error.reason);
       } else {
-    	Meteor.Router.to('postsList', post);
+    	Meteor.Router.to('postsList', currentPostId);
       }
     });
   },
