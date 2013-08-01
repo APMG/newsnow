@@ -1,6 +1,6 @@
 <template name="postItem">
 
-	<article {{#if sticky}}class='sticky'{{/if}}>
+	<article class='{{#if sticky}}sticky{{/if}} {{#if url}}hasUrl{{/if}}'>
 		<div class='content'>
 			<div class='byline'>
 				<h3>{{author}}</h3>  <time datetime='{{isoDate submitted}}' >&hellip;</time> 
@@ -8,11 +8,9 @@
 			{{#if image}}
 				<img src='{{image}}' />
 			{{/if}}
+			
 			{{#markdown}}{{content}}{{/markdown}}
 			
-			{{#if url}}
-			<a href="{{url}}" class='post-link'>Read more <span>({{domain}})</span> &rarr; </a>
-			{{/if}}
 		</div>
 		{{#if currentUser}}<a href="{{postEditPath this}}">Edit</a>{{/if}}
 

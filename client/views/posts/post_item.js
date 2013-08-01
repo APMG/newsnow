@@ -12,3 +12,13 @@ Template.postItem.helpers({
 Template.postItem.rendered = function(){
     jQuery('article time').timeago();  //make it say 'xxxx minutes ago'
 }
+
+
+Template.postItem.events({
+  'click article': function(e) {
+    e.preventDefault();
+    if (this.url){
+    	window.open(this.url);
+    }
+  }
+});
