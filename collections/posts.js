@@ -48,7 +48,8 @@ Meteor.methods({
       content: postAttributes.content,  //+ (this.isSimulation ? '(client)' : '(server)'),
       userId: user._id, 
       author: typeof user.username !== 'undefined' ? user.username : user.profile.name,
-      submitted: new Date().getTime()
+      submitted: new Date().getTime(),
+      sticky: postAttributes.sticky == '1' ? true : false
     });
 
     console.log(post);

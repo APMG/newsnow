@@ -1,6 +1,6 @@
 <template name="postItem">
 
-	<article>
+	<article {{#if sticky}}class='sticky'{{/if}}>
 		<div class='content'>
 			<div class='byline'>
 				<h3>{{author}} &middot; MPR News</h3>  <time datetime='{{isoDate submitted}}' >&hellip;</time> 

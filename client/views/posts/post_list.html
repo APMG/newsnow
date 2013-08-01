@@ -1,4 +1,11 @@
 <template name="postsList">
+
+  <div class="stickyPosts">
+    {{#each stickyPosts}}
+      {{> postItem}}
+    {{/each}}
+  </div>
+
   <div class="posts">
     {{#each posts}}
       {{> postItem}}
