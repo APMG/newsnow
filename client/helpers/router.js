@@ -1,7 +1,12 @@
 Meteor.Router.add({
   '/': 'postsList',
   '/login': 'login',
-  '/submit': 'postSubmit'
+  '/submit': 'postSubmit',
+  //we do not have a /posts page right now
+  '/posts/:_id/edit': {
+    to: 'postEdit', 
+    and: function(id) { Session.set('currentPostId', id); }    
+  },
 });
 
 

@@ -1,0 +1,34 @@
+<template name="postEdit">
+  {{#with post}}
+  <form>
+    <fieldset>
+        <legend>Edit post</legend>
+
+        <div>
+            <label for='sticky'>Sticky?</label>
+            <input name="sticky" type="checkbox" value="{{sticky}}" {{#if sticky}}checked='checked'{{/if}}/>
+        </div>
+
+        <div
+
+        <div>
+            <label for='url'>Link URL</label>
+            <input name="url" type="text" value="{{url}}" placeholder="post URL" />
+        </div>
+
+
+        <div>
+            <label for='content'>Content message</label>
+            <textarea name="content" type="text">{{content}}</textarea>
+        </div>
+
+        <div>
+            <input type="submit" value="Submit" class="btn btn-primary"/> <a class='button delete' href='#'>Delete</a>
+        </div>
+
+    </fieldset>
+
+  </form>
+
+  {{/with}}
+</template>

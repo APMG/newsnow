@@ -42,12 +42,22 @@ Meteor.methods({
     // if (postAttributes.url && postWithSameLink) {
     //   throw new Meteor.Error(302, 'This link has already been posted', postWithSameLink._id);
     // }
+        
+    //try to figure out a username for the user
+    var author = 'MPR News Staff'; //default to MPR news staff
+    if (typeof user.username == 'string'){
+        author = user.username;
+    } else if( !_.isUndefined(user.profile) && typeof user.profile.name == 'string' ){
+        author = user.profile.name;
+    }
+    
 
     // pick out the whitelisted keys
     var post = _.extend(_.pick(postAttributes, 'content', 'title', 'message'), {
       content: postAttributes.content,  //+ (this.isSimulation ? '(client)' : '(server)'),
       userId: user._id, 
-      author: typeof user.username !== 'undefined' ? user.username : user.profile.name,
+      url: postAttributes.url,
+      author: author,
       submitted: new Date().getTime(),
       sticky: postAttributes.sticky == '1' ? true : false
     });
