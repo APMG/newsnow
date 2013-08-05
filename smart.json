@@ -2,6 +2,7 @@
   "packages": {
     "session-extras": {},
     "router": {},
-    "roles": {}
+    "roles": {},
+    "npm": {}
   }
 }

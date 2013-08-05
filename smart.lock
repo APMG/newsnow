@@ -4,7 +4,8 @@
     "basePackages": {
       "session-extras": {},
       "router": {},
-      "roles": {}
+      "roles": {},
+      "npm": {}
     },
     "packages": {
       "session-extras": {
@@ -21,6 +22,11 @@
         "git": "https://github.com/alanning/meteor-roles.git",
         "tag": "v1.0.5",
         "commit": "a6e0ce33f8dc69a816165c458b138c2acb30ad0e"
+      },
+      "npm": {
+        "git": "https://github.com/arunoda/meteor-npm.git",
+        "tag": "v0.1.4",
+        "commit": "68ab2b952ab21a5bbba879b37be9385ec8ff6d63"
       },
       "page-js-ie-support": {
         "git": "https://github.com/tmeasday/meteor-page-js-ie-support.git",
