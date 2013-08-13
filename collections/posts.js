@@ -10,6 +10,10 @@ Posts.allow({
   update: function(userId, doc) {
     // only allow posting if you are logged in
     return !! userId;
+  },
+  remove: function(userId, doc) {
+    // only allow posting if you are logged in
+    return !! userId;
   }
 
 });
@@ -51,7 +55,7 @@ Meteor.methods({
       content: postAttributes.content,  //+ (this.isSimulation ? '(client)' : '(server)'),
       userId: user._id, 
       url: postAttributes.url,
-      author: author,
+      imageUrl: postAttributes.imageUrl,
       submitted: new Date().getTime(),
       sticky: postAttributes.sticky == '1' ? true : false
     });

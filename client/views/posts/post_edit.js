@@ -11,12 +11,15 @@ Template.postEdit.events({
 
     var currentPostId = Session.get('currentPostId');
 
+    //var stickyVal = $(e.target).find('[name=sticky]:checked').val() ?
+
     var postProperties = {
         url: $(e.target).find('[name=url]').val(),
       	content: $(e.target).find('[name=content]').val(),
-      	sticky: $(e.target).find('[name=sticky]:checked').val(),
+      	sticky: !$(e.target).find('[name=sticky]:checked').val() ? false : true,
         imageUrl: $(e.target).find('[name=imageUrl]').val()
     }
+    console.log(postProperties);
 
     Posts.update(currentPostId, {$set: postProperties}, function(error) {
       if (error) {
